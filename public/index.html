@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dharunesshy Website Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="app-shell">
+
+  <header class="topbar">
+    <h1 class="app-title">Dharunesshy Website Generator</h1>
+    <p class="tagline">if you want to make a website Dharunesshy will help you</p>
+  </header>
+
+  <main class="layout">
+    <!-- Left: Prompt + Preview -->
+    <section class="left-pane">
+      <div class="card">
+        <label for="userPrompt" class="label">Describe the website you want:</label>
+        <textarea id="userPrompt" class="prompt-input" placeholder="Example: A modern landing page for a personal fitness coach with hero, services, pricing, and contact form. Dark theme, neon accent."></textarea>
+
+        <button id="generateBtn" class="btn-generate">🚀 Generate Website</button>
+
+        <div id="status" class="status-msg"></div>
+      </div>
+
+      <div class="card preview-card">
+        <div class="preview-header">
+          <span>Live Preview</span>
+        </div>
+        <iframe id="previewFrame" class="preview-frame"></iframe>
+      </div>
+    </section>
+
+    <!-- Right: Code Output -->
+    <section class="right-pane">
+      <div class="card code-card">
+        <div class="preview-header">
+          <span>HTML</span>
+        </div>
+        <textarea id="htmlCode" class="code-view" readonly></textarea>
+      </div>
+
+      <div class="card code-card">
+        <div class="preview-header">
+          <span>CSS</span>
+        </div>
+        <textarea id="cssCode" class="code-view" readonly></textarea>
+      </div>
+
+      <div class="card code-card">
+        <div class="preview-header">
+          <span>JS</span>
+        </div>
+        <textarea id="jsCode" class="code-view" readonly></textarea>
+      </div>
+
+      <div class="card code-card">
+        <div class="preview-header">
+          <span>Notes</span>
+        </div>
+        <textarea id="notesText" class="code-view small" readonly></textarea>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Powered by Gemini 2.5 Flash via Google Gen AI SDK. 🔥</p>
+  </footer>
+
+  <script type="module" src="client.js"></script>
+</body>
+</html>
