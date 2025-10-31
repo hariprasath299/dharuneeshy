@@ -21,11 +21,13 @@ generateBtn.addEventListener("click", async () => {
   statusEl.textContent = "Generating with Gemini 2.5 Flash... ⏳";
 
   try {
-    const res = await fetch("/api/generate", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prompt }),
-    });
+    const API_BASE = "https://aibackend-g72b.onrender.com/"; // <--- the Render URL
+
+const res = await fetch(`${API_BASE}/api/generate`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ prompt }),
+});
 
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
